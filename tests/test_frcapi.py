@@ -1,15 +1,21 @@
+import os
+import sys
+
+current = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+sys.path.insert(0, current)
+
 import unittest
 
 import testdata.test_testweatherdata as test_testweatherdata
 
-import frcm.datamodel.utils as utils
-from frcm.datamodel.model import WeatherData, Observations, Forecast, Location
+from src.frcm.datamodel import utils
+from src.frcm.datamodel.model import WeatherData, Observations, Forecast, Location
 
-from frcm.frcapi import FireRiskAPI
-from frcm.weatherdata.client_met import METClient
-from frcm.weatherdata.extractor_met import METExtractor
-from frcm.datamodel.model import Location
-import frcm.fireriskmodel.preprocess
+from src.frcm.frcapi import FireRiskAPI
+from src.frcm.weatherdata import client_met as METClient
+from src.frcm.weatherdata import extractor_met as METExtractor
+from src.frcm.datamodel import model as Location
+from src.frcm.fireriskmodel import preprocess
 
 
 class TestFRCAPI(unittest.TestCase):

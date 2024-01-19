@@ -1,9 +1,15 @@
+import os
+import sys
+
+current = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+sys.path.insert(0, current)
+
 import datetime
 
-from frcm.weatherdata.extractor_met import METExtractor
-from frcm.weatherdata.client_met import METClient
+from src.frcm.weatherdata.extractor_met import METExtractor
+from src.frcm.weatherdata.client_met import METClient
 
-from frcm.datamodel.model import Location
+from src.frcm.datamodel.model import Location
 
 import unittest
 

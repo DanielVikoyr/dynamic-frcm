@@ -1,10 +1,16 @@
+import os
+import sys
+
+current = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+sys.path.insert(0, current)
+
 import unittest
 import datetime
 import dateutil
 
 import testdata.test_testdata_fireriskmodel as test_testdata
 
-import frcm.datamodel.utils as utils
+from src.frcm.datamodel import utils
 
 
 class TestUtil(unittest.TestCase):

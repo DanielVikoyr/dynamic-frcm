@@ -4,15 +4,14 @@ import datetime
 import os
 import sys
 
-#current = os.path.dirname(os.path.realpath(__file__))
-#parent = os.path.dirname(current)
-#sys.path.append(parent)
+current = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+sys.path.insert(0, current)
 
-import frcm.datamodel.model as dm
+from src.frcm.datamodel import model as dm
+from src.frcm.datamodel import utils
 
 import testdata.test_testdata_datamodel as test_testdata
 
-import frcm.datamodel.utils as utils
 
 
 class TestDataModel(unittest.TestCase):

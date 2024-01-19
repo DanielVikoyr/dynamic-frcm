@@ -1,19 +1,18 @@
 import os
 import sys
 
+current = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+sys.path.insert(0, current)
+
 import unittest
 import json
 
-from frcm.weatherdata.extractor_met import METExtractor
+from src.frcm.weatherdata import extractor_met as METExtractor
 
 import sampledata.met_sample_forecast
 import sampledata.frost_sample_observation
 
-#current = os.path.dirname(os.path.realpath(__file__))
-#parent = os.path.dirname(current)
-#sys.path.append(parent)
-
-from frcm.datamodel.model import Location
+from src.frcm.datamodel.model import Location
 
 
 class TestUtil(unittest.TestCase):
