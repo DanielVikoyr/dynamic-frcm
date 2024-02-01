@@ -9,7 +9,7 @@ import datetime
 
 
 from frcm.fireriskmodel import compute
-import test_testdata_fireriskmodel as test_testdata
+import testdata.test_testdata_fireriskmodel as test_testdata
 from frcm.fireriskmodel import preprocess 
 
 
