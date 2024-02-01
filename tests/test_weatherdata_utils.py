@@ -13,10 +13,10 @@ import sys
 import sampledata.frost_sample_weatherdata
 import sampledata.met_sample_weatherdata
 
-from src.frcm.datamodel import model as dm
-from src.frcm.fireriskmodel import preprocess as pp
-from src.frcm.fireriskmodel.parameters import delta_t
-from src.frcm.weatherdata import utils
+from frcm.datamodel import model as dm
+from frcm.fireriskmodel import preprocess as pp
+from frcm.fireriskmodel.parameters import delta_t
+from frcm.weatherdata import utils
 
 
 class TestUtil(unittest.TestCase):

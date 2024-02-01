@@ -7,10 +7,10 @@ import sys
 current = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
 sys.path.insert(0, current)
 
-from src.frcm.datamodel import model as dm
-from src.frcm.datamodel import utils
+from frcm.datamodel import model as dm
+from frcm.datamodel import utils
 
-import testdata.test_testdata_datamodel as test_testdata
+import test_testdata_datamodel as test_testdata
 
 
 

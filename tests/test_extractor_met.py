@@ -7,12 +7,12 @@ sys.path.insert(0, current)
 import unittest
 import json
 
-from src.frcm.weatherdata import extractor_met as METExtractor
+from frcm.weatherdata import extractor_met as METExtractor
 
 import sampledata.met_sample_forecast
 import sampledata.frost_sample_observation
 
-from src.frcm.datamodel.model import Location
+from frcm.datamodel.model import Location
 
 
 class TestUtil(unittest.TestCase):

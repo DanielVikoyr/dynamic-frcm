@@ -8,14 +8,14 @@ import unittest
 
 import testdata.test_testweatherdata as test_testweatherdata
 
-from src.frcm.datamodel import utils
-from src.frcm.datamodel.model import WeatherData, Observations, Forecast, Location
+from frcm.datamodel import utils
+from frcm.datamodel.model import WeatherData, Observations, Forecast, Location
 
-from src.frcm.frcapi import FireRiskAPI
-from src.frcm.weatherdata import client_met as METClient
-from src.frcm.weatherdata import extractor_met as METExtractor
-from src.frcm.datamodel import model as Location
-from src.frcm.fireriskmodel import preprocess
+from frcm.frcapi import FireRiskAPI
+from frcm.weatherdata import client_met as METClient
+from frcm.weatherdata import extractor_met as METExtractor
+from frcm.datamodel import model as Location
+from frcm.fireriskmodel import preprocess
 
 
 class TestFRCAPI(unittest.TestCase):

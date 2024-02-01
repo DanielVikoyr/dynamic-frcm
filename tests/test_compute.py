@@ -8,14 +8,14 @@ import unittest
 import datetime
 
 
-from src.frcm.fireriskmodel import compute
-import testdata.test_testdata_fireriskmodel as test_testdata
-from src.frcm.fireriskmodel import preprocess 
+from frcm.fireriskmodel import compute
+import test_testdata_fireriskmodel as test_testdata
+from frcm.fireriskmodel import preprocess 
 
 
-from src.frcm.datamodel import utils as dmutils
-from src.frcm.datamodel import model as dm
-from src.frcm.weatherdata import utils as wdutils
+from frcm.datamodel import utils as dmutils
+from frcm.datamodel import model as dm
+from frcm.weatherdata import utils as wdutils
 
 
 class TestUtil(unittest.TestCase):
