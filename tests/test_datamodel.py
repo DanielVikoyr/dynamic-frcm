@@ -10,7 +10,7 @@ sys.path.insert(0, current)
 from frcm.datamodel import model as dm
 from frcm.datamodel import utils
 
-import test_testdata_datamodel as test_testdata
+import testdata.test_testdata_datamodel as test_testdata
 
 
 
