@@ -26,8 +26,8 @@ jobs:
 
       - name: Set environment variables
         run: |
-          echo "export MET_CLIENT_ID=${{ secrets.MET_CLIENT_ID }}" >> $GITHUB_ENV
-          echo "export MET_CLIENT_SECRET=${{ secrets.MET_CLIENT_SECRET }}" >> $GITHUB_ENV
+          echo "export MET_CLIENT_ID=${{ vars.MET_CLIENT_ID }}" >> $GITHUB_ENV
+          echo "export MET_CLIENT_SECRET=${{ vars.MET_CLIENT_SECRET }}" >> $GITHUB_ENV
           echo "MET_CLIENT_ID: $MET_CLIENT_ID"
           echo "MET_CLIENT_SECRET: $MET_CLIENT_SECRET"
           
