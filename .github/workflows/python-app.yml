@@ -23,5 +23,11 @@ jobs:
           cache: "poetry"
           
       - run: poetry install
+
+      - name: Set environment variables
+        run: |
+          echo "export MET_CLIENT_ID=${{ secrets.MET_CLIENT_ID }}" >> $GITHUB_ENV
+          echo "export MET_CLIENT_SECRET=${{ secrets.MET_CLIENT_SECRET }}" >> $GITHUB_ENV
+          
       - run: poetry run pytest
 
