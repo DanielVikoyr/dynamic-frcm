@@ -1,9 +1,3 @@
-import os
-import sys
-
-current = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
-sys.path.insert(0, current)
-
 import datetime
 
 from frcm.weatherdata.extractor_met import METExtractor

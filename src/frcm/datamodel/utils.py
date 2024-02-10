@@ -54,13 +54,12 @@ def list_to_wdps(wdps) -> list[dm.WeatherDataPoint]:
     return list(map(dict_to_wdp, wdps))
 
 
-def wdps_list_str(wdps : list[dm.WeatherDataPoint]) -> str:
-    # TODO: current string concatenation is inefficient
-    format_str = ''
-    for wdp in wdps:
-        format_str = format_str + str(wdp) + '\n'
-
-    return format_str
+def wdps_list_str(wdps: list[dm.WeatherDataPoint]) -> str:
+    """
+    Converts a list of WeatherDataPoint to a string representation 
+    where datapoints are separated by new line.
+    """
+    return '\n'.join(str(wdp) for wdp in wdps)
 
 
 # TODO: validate could possibly raise different exceptions depending on violation
