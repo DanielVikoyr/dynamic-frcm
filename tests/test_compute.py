@@ -1,21 +1,20 @@
 import os
 import sys
 
-current = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
-sys.path.insert(0, current)
-
 import unittest
 import datetime
 
-
-from src.frcm.fireriskmodel import compute
+import frcm.fireriskmodel.compute as compute
 import testdata.test_testdata_fireriskmodel as test_testdata
-from src.frcm.fireriskmodel import preprocess 
+import frcm.fireriskmodel.preprocess
 
+#current = os.path.dirname(os.path.realpath(__file__))
+#parent = os.path.dirname(current)
+#sys.path.append(parent)
 
-from src.frcm.datamodel import utils as dmutils
-from src.frcm.datamodel import model as dm
-from src.frcm.weatherdata import utils as wdutils
+import frcm.datamodel.utils as dmutils
+import frcm.datamodel.model as dm
+import frcm.weatherdata.utils as wdutils
 
 
 class TestUtil(unittest.TestCase):
