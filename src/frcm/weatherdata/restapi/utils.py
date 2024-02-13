@@ -1,8 +1,5 @@
 from frcm.datamodel.model import Location
 
-def parse_location ():
-    pass
-
 
 """
     Currently the functions that parse data being sent to and received from external Geocoding APIs live here. 
