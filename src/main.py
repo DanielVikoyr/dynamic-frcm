@@ -6,6 +6,7 @@ from frcm.weatherdata.client_met import METClient
 from frcm.weatherdata.extractor_met import METExtractor
 from frcm.datamodel.model import Location
 import datetime
+import dateutil.parser
 
 # sample code illustrating how to use the Fire Risk Computation API (FRCAPI)
 if __name__ == "__main__":
@@ -78,11 +79,15 @@ async def services ():
 # Calculates fire risk based on raw data supplied by the user.
 @app.get("/fireguard/services/rawdata")
 async def raw_data(temp: float, humidity: float, wind_speed: float, timestamp: str):
-    datadict: dict = {
-        "data": [{
-                "temperature": temp, "humidity": humidity, "wind_speed": wind_speed, "timestamp": timestamp
-                }]}
-    datalist: list[WeatherDataPoint] = weatherdata_parse(datadict=datadict)
+    
+    timestamp = dateutil.parser.parse(timestamp)
+    wd_point = WeatherDataPoint(temperature=temp,
+                                    humidity=humidity,
+                                    wind_speed=wind_speed,
+                                    timestamp=timestamp)
+    data:list
+    data.append(wd_point)
+    print(data)
 
     met_extractor = METExtractor()
 
