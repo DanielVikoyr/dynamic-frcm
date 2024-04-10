@@ -1,10 +1,14 @@
-# DYNAMIC Fire risk indicator implementation
+# FireGuard - Group 5
 
-This repository contains the implementation of the dynamic fire risk indicator described in the submitted paper:
+There are only one way to install this! May the odds be ever in your favor!
 
-R.D: Strand and L.M. Kristensen. *An implementation, evaluation and validation of a dynamic fire and conflagration risk indicator for wooden homes*. Submitted for review.
+#Prerequisits
 
-which uses forecast and weather data observation for computing fire risk indication in the form of time-to-flash-over (ttf) for wooden houses. 
+## <span style="color:orange"> Prerequisites </span>
+* [Node.js](https://nodejs.org/en/download/)
+* [Python 3.11](https://www.python.org/downloads/)
+* [Poetry](https://python-poetry.org/docs/#installation)
+* [Docker](https://docs.docker.com/get-docker/)
 
 # Installation
 
