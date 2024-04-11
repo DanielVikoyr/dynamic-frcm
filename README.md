@@ -1,4 +1,4 @@
-# FireRisk - Group 5
+# FireGuard - Group 5
 
 The FireGuard Project for the ADA502 course.
 
@@ -14,64 +14,65 @@ Recommended:
 
 ## <span style="color:tomato"> Installation </span>
 
-To install the program for this project, we need to downloade/pull the docker image from our DockerHub.
+To install the program for this project, you need to download/pull the docker image from DockerHub.
 
-After downloading the Docker image, we can sett up and run the program/application on localhost.
+After downloading the Docker image, you can set up and run the program locally (on localhost).
 
 ### <span style="color:tomato">Step 1: Open Docker Desktop</span>
 
-Firstly, open [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+First, open [Docker Desktop](https://www.docker.com/products/docker-desktop/). 
 
-### <span style="color:tomato">Step 2: Open Powershell or CMD</span>
-Open Powershell or an other terminal window.
+(Docker needs to be running in the background.) 
 
-(You can write "CMD" in windows search-bar to find the embeded one for Windows users)
+### <span style="color:tomato">Step 2: Open a terminal window</span>
+
+Launch your terminal of choice. 
+
+Tip: You can type "cmd" in a Windows search bar to find the embedded command-line interface on Windows devices, or alternatively press Windows key + R, type "cmd", and hit enter. 
 
 ### <span style="color:tomato">Step 3: Pull the project from Docker</span>
-Now we need to downloade the project from Docker!
+Next, you need to download the project from Docker. 
 
-In your terminal window of choice, write the command:
+Write the following command in your terminal window: 
 ```
-docker pull xxx
+docker pull princesig/ada502_group_5:latest 
 ```
-Image
+<img src=https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/c8caa6fd-327b-49c7-97a1-670f8b05c548 width="570">
 
-### <span style="color:tomato">Step 4: Check Docker images on your local machine</span>
-The Docker image of the project should be on you computer. 
+#### <span style="color:tomato">Step 3.1 (optional): Check Docker images on your local machine</span>
+The project's Docker image should now be on your computer. 
 
-To check it thats the case, run the command:
 
+To confirm this, you can write the following command in your terminal window: 
 ```
-docker images
+docker images 
 ```
+You should see something like this: 
 
-In your terminal window.
+<img src="https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/17d6a082-31cb-43e8-91dd-940c71ddd789" width="620">
 
-Image
+#### <span style="color:tomato">Step 3.2 (optional): Check the Docker Desktop Application</span>
+In the Docker Desktop application, you should now be able see the project image in the "Images" tab: 
 
-### <span style="color:tomato">Step 5: Check the Docker Dekstop Application</span>
-In the Docker application, we should now be able see the projekt image in the image folder:
+![Docker Images](https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/e2077c31-f916-4ba5-beea-d662d7caffb5)
 
-Image
+### <span style="color:tomato">Step 4: Run the project image</span>
+In the "Images" tab, select the newly added image. Press the run button for the project: 
 
-### <span style="color:tomato">Step 6: Run the project image</span>
-Manualy press the run option on the project we just downloded to the Docker Application:
+![Run Image](https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/42ac821c-58ea-4963-83cc-65df7e537a2c)
 
-Image
+Enter "8000" as the host port, and then press run: 
 
-Choose "Host port" 8000:
+<img src="https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/6ebceb70-95f3-476a-a43c-e7931ae2dfef" width="325">
 
-Image
+### <span style="color:tomato">Step 5: Profit!!! 🎉🥳🎂</span>
+Congratulations, you are now running the application! 
 
-Then press "Run":
+You should now be able to see the following information about the running container in your Docker Desktop application, in the "Containers" tab: 
 
-Image
+<img src="https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/0b4b1d72-09c7-4ce4-b5f5-bfe0677a09e3" width="650">
 
-### <span style="color:tomato">Step 7: Profit!!! 🎉🥳🎂</span>
-Congratulations you are now running the application!
+Continue to the "User guide" below for pointers on how you can use the program to perform fire risk calculations. 
 
-Continue to the "User guide" below to get pointers on how to use the program.
+## <span style="color:tomato"> User guide </span> 
 
-## <span style="color:tomato"> User guide </span>
-
-text
