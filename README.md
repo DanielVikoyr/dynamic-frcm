@@ -64,7 +64,7 @@ In your Docker Desktop application, under the "Images" tab, select your new imag
 
 ![Run Image](https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/42ac821c-58ea-4963-83cc-65df7e537a2c)
 
-Enter "8000" as the host port and press run: 
+**Important:** Enter "8000" as the host port and press run: 
 
 <img src="https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/6ebceb70-95f3-476a-a43c-e7931ae2dfef" width="325">
 
