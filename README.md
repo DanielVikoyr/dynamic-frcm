@@ -40,7 +40,7 @@ Write the following command in your terminal window:
 ```
 docker pull alexbringh/fireguard-v-0-1-0
 ```
-<img src=https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/803fe1d5-4505-4512-8ac9-d22b152ecf21 width="570">
+<img src=https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/803fe1d5-4505-4512-8ac9-d22b152ecf21 width="620">
 
 #### <span style="color:tomato">Step 3.1 (optional): Check Docker images on your local machine</span>
 The project's Docker image should now be on your computer. 
