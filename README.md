@@ -38,9 +38,9 @@ Next, you need to download the project from Docker.
 
 Write the following command in your terminal window: 
 ```
-docker pull princesig/ada502_group_5:latest 
+docker pull alexbringh/fireguard-v-0-1-0
 ```
-<img src=https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/c8caa6fd-327b-49c7-97a1-670f8b05c548 width="570">
+<img src=https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/803fe1d5-4505-4512-8ac9-d22b152ecf21 width="570">
 
 #### <span style="color:tomato">Step 3.1 (optional): Check Docker images on your local machine</span>
 The project's Docker image should now be on your computer. 
@@ -52,12 +52,12 @@ docker images
 ```
 You should now see something like this: 
 
-<img src="https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/17d6a082-31cb-43e8-91dd-940c71ddd789" width="620">
+<img src="https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/abbbcbad-84b8-4afd-99da-2489315678f7" width="620">
 
 #### <span style="color:tomato">Step 3.2 (optional): Check the Docker Desktop application</span>
 In the Docker Desktop application, you should now be able see the project image in the "Images" tab: 
 
-![Docker Images](https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/e2077c31-f916-4ba5-beea-d662d7caffb5)
+![Docker Images](https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/6ede8f86-bcd4-4e2b-a7be-44b818c0e9fd)
 
 ### <span style="color:tomato">Step 4: Run a Docker container using the project image</span>
 In your Docker Desktop application, under the "Images" tab, select your new image and press run: 
