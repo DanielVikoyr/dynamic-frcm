@@ -1,28 +1,31 @@
 # FireGuard - Group 5
 
-The FireGuard Ckoud Service v.0.1.0 for the ADA502 course.
+The FireGuard Ckoud Service v.0.1.0 for the ADA502 course. 
 
-## <span style="color:tomato"> Prerequisites </span>
-Mandatory:
+The project repository is publically available on [Github](https://github.com/ADA502-FireGuard/dynamic-frcm). 
+
+## <span style="color:tomato"> Prerequisites </span> 
+
 * [Python 3.11](https://www.python.org/downloads/)
 * [Poetry](https://python-poetry.org/docs/#installation)
 * [Docker](https://docs.docker.com/get-docker/)
 * [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-Recommended:
+Recommended: 
 * [Powershell](https://github.com/PowerShell/PowerShell/releases/tag/v7.4.1)
+* [Postman](https://www.postman.com/downloads/postman-agent/)
 
 ## <span style="color:tomato"> Installation </span>
 
 To install the program for this project, you need to download/pull the docker image from DockerHub.
 
-After downloading the Docker image, you can set up and run the program locally (on localhost).
+After downloading the Docker image, the program can be set up and run. 
 
-### <span style="color:tomato">Step 1: Open Docker Desktop</span>
+### <span style="color:tomato">Step 1: Launch Docker Desktop</span>
 
 First, open [Docker Desktop](https://www.docker.com/products/docker-desktop/). 
 
-(Docker needs to be running in the background.) 
+(Docker simply needs to be running in the background for now.) 
 
 ### <span style="color:tomato">Step 2: Open a terminal window</span>
 
@@ -47,7 +50,7 @@ To confirm this, you can write the following command in your terminal window:
 ```
 docker images 
 ```
-You should see something like this: 
+You should now see something like this: 
 
 <img src="https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/17d6a082-31cb-43e8-91dd-940c71ddd789" width="620">
 
@@ -56,12 +59,12 @@ In the Docker Desktop application, you should now be able see the project image 
 
 ![Docker Images](https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/e2077c31-f916-4ba5-beea-d662d7caffb5)
 
-### <span style="color:tomato">Step 4: Run the project image</span>
-In the "Images" tab, select the newly added image. Press the run button for the project: 
+### <span style="color:tomato">Step 4: Run a Docker container using the project image</span>
+In your Docker Desktop application, under the "Images" tab, select your new image and press run: 
 
 ![Run Image](https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/42ac821c-58ea-4963-83cc-65df7e537a2c)
 
-Enter "8000" as the host port, and then press run: 
+Enter "8000" as the host port and press run: 
 
 <img src="https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/6ebceb70-95f3-476a-a43c-e7931ae2dfef" width="325">
 
@@ -72,7 +75,7 @@ You should now be able to see the following information about the running contai
 
 <img src="https://github.com/ADA502-FireGuard/dynamic-frcm/assets/94006886/0b4b1d72-09c7-4ce4-b5f5-bfe0677a09e3" width="650">
 
-Continue to the "User guide" below for pointers on how you can use the program to perform fire risk calculations. 
+Proceed to the "User guide" below for pointers on how you can use the program to perform fire risk calculations. 
 
 ## <span style="color:tomato"> User guide </span> 
 
@@ -81,10 +84,10 @@ Once the image is running within a container, the FireGuard Cloud Service will a
 #### <span style="color:tomato">Options for communicating with the cloud service.</span>
 The Cloud Service accepts inputs in the form of standard http requests through a RestAPI. To communicate with the cloud service you may use any framework or program that sends get, post, etc. requests with the proper parameters as described further below. 
 For simple testing of functionality, we recommend using Postman as it gives a simple GUI for setting up these requests, however be aware that postman by default only sends one request at a time, even if you try to run an entire collection of postman requests, it will simply send them one-by-one. For simple functionality this is no issue, however if you wish to simulate multiple users at a time, a sort of "stress-test", you will need a different approach. A good alternative for setting up tests for multiple users is to make a small python-script using the threading and requests modules to make a certain amount of threads that send their own request simultaneously.
-If Postman will be satisfactory, a pre-configured Postman collection exists under the "test" folder of this repository.
+If Postman will be satisfactory, a pre-configured Postman collection exists under the [tests](https://github.com/ADA502-FireGuard/dynamic-frcm/tree/main/tests) folder of the [repository](https://github.com/ADA502-FireGuard/dynamic-frcm).
 
 #### <span style="color:tomato">Setting up requests to the FireGuard Cloud Service</span>
-Assuming that the request is sent locally to the docker container, the ip of the container is given here as localhost:8000, however if this is not the case, if the container is running on a server or such, find and use the correct IP for your usecase.
+Assuming that the request is sent locally to the Docker container, the IP address of the container is given here as localhost:8000. However, if this is not the case (i.e. the container is running on a server or such), find and use the correct IP for your usecase.
 
 The most simple request that can be made to FireGuard is
 ```
@@ -92,12 +95,12 @@ GET http://localhost:8000/fireguard
 ```
 This request does not require any tags. FireGuard will simply return a welcoming message.
 
-The next request is called services and returns what kind of services are available. NB: As of v.1.0 the services list is not updated to include all services and follow this guide instead of that.
+The next request is called "services" and it returns what kind of services are available. NB: As of v.1.0 the services list is not updated to include all services, and you should instead follow this guide for now.
 ```
 GET http://localhost:8000/fireguard/services
 ```
 
-At this point you are presented with a couple of choices. FireGuard offers a couple of different methods of calculating firerisk. You may insert weather data, location and timestamp yourself and have the model simply calculate and return the results using the following request.
+At this point you are presented with a couple of choices. FireGuard offers a couple of different methods of calculating fire risk. You may insert weather data, location and timestamp yourself, and have the model simply calculate and return the results using the following request. 
 ```
 POST http://localhost:8000/fireguard/rawdata? tags...
 ```
@@ -115,7 +118,7 @@ lon:                 float - The longitude coordinate where the data was measure
 lat:                 float - The latitude coordinate where the data was measured
 ```
 
-If you do not have all this data but is instead interested in the firerisk in a certain location, FireGuard offers a variety of requests that only requires you to specify a location. FireGuard will from there convert the location to coordinates through a GeoCoding service and get the weather data for that location through a Meteorological service.
+If you do not have all necessary data to use the "rawdata" option, but is instead interested in the firerisk at a certain location, FireGuard offers a variety of requests that only requires you to specify a location. FireGuard will from there convert the location to coordinates through a GeoCoding service, and then retrieve weather data for the respective location through a Meteorological service. 
 
 The available options for the area service are as follows.
 
@@ -167,5 +170,5 @@ days:      float - The number of days to be calculated for.
 
 
 #### <span style="color:tomato">Following Versions</span>
-The next versions is also expected to accept multiple datapoints for any options, as well as feature more options such as postal area, authentication and subscription to data for a certain area.
+The next versions are expected to also accept multiple datapoints for any options, as well as feature more options such as postal area, authentication and subscription to data for a certain area.
 
